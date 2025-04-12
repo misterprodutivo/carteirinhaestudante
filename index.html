@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Unicesumar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="./cropped-Unicesumar-isologo.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <div class="logos">
+        <img src="logo-dne-branco.webp" alt="">
+        <img src="LOGO-FESN-VETORIZADA.fw_-2048x1054-1-r07ctikppkzz6ivod0lk4wxcvevn0tcrohrc5v0q68.webp" alt="">
+    </div>
+    <div class="profile">
+        <img id="foto" src="foto.png" alt="">
+        <img id="qrcode" src="randomqr-256.png" alt="">
+    </div>
+
+    <div class="container">
+        <div class="card-preview">
+            <div class="card-field"><strong>Nome:</strong> <span id="preview-nome">Alana Vieira Carriel</span></div>
+            <div class="card-field"><strong>Curso:</strong> <span id="preview-curso">Odontologia</span></div>
+            <div class="card-field"><strong>Instituição:</strong> <span id="preview-instituicao">Unicesumar</span>
+            </div>
+            <div class="card-field"><strong>CPF:</strong> <span id="preview-cpf">21177607-2</span></div>
+            <div class="card-field"><strong>RA:</strong> <span id="preview-ra">21177607-2</span></div>
+            <div class="card-field"><strong>Nascimento:</strong> <span id="preview-nascimento">25/09/2006</span></div>
+            <div class="card-field"><strong>Validade:</strong> <span id="preview-validade">30/12/2026</span></div>
+        </div>
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                const target = document.getElementById(`preview-${input.id}`);
+                if (target) target.textContent = input.value;
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
